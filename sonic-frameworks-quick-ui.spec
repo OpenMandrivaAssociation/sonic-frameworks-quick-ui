@@ -71,13 +71,18 @@ Conflicts: %{_lib}KirigamiPlatform-devel
 %description -n %{devname}
 %summary
 
+%install -a 
+rm -rf %{buildroot}/%{_libdir}/cmake
+
 %files -f %{name}.lang
 %{_datadir}/kdevappwizard/templates/kirigami6.tar.bz2
 %{_datadir}/qlogging-categories6/kirigami.categories
 
 %files -n %{devname}
 %{_includedir}/KF6/Kirigami
-%{_libdir}/cmake/KF6Kirigami*
+
+# pending rename
+# %{_libdir}/cmake/KF6Kirigami*
 
 %files -n %{libname}
 %{_libdir}/libKirigami.so*
@@ -91,4 +96,8 @@ Conflicts: %{_lib}KirigamiPlatform-devel
 %{_libdir}/libKirigamiPrimitives.so*
 %{_libdir}/libKirigamiPrivate.so*
 %{_libdir}/libKirigamiTemplates.so*
+%{_libdir}/libKirigamiForms.so*
+%{_libdir}/libKirigamiFormsPrivateCards.so*
+%{_libdir}/libKirigamiFormsPrivateFlat.so*
+%{_libdir}/libKirigamiFormsPrivateTemplates.so*
 %{_qtdir}/qml/org/kde/kirigami
