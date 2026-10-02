@@ -80,6 +80,7 @@ rm -rf %{buildroot}/%{_libdir}/cmake
 
 %files -n %{devname}
 %{_includedir}/KF6/Kirigami
+%{_qtdir}/metatypes/qt6kirigamiplatform_metatypes.json
 
 # pending rename
 # %{_libdir}/cmake/KF6Kirigami*
