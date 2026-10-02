@@ -7,7 +7,7 @@
 
 Name: sonic-frameworks-quick-ui
 Version: 6.28.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 URL:     https://github.com/Sonic-DE/sonic-frameworks-quick-ui
 # %if 0%{?git:1}
 # Source0: https://invent.kde.org/frameworks/kirigami/-/archive/master/kirigami-master.tar.bz2#/kirigami-%{git}.tar.bz2
