@@ -7,7 +7,7 @@
 
 Name: sonic-frameworks-quick-ui
 Version: 6.28.0
-Release: %{?git:0.%{git}.}2
+Release: %{?git:0.%{git}.}3
 URL:     https://github.com/Sonic-DE/sonic-frameworks-quick-ui
 # %if 0%{?git:1}
 # Source0: https://invent.kde.org/frameworks/kirigami/-/archive/master/kirigami-master.tar.bz2#/kirigami-%{git}.tar.bz2
@@ -71,8 +71,7 @@ Conflicts: %{_lib}KirigamiPlatform-devel
 %description -n %{devname}
 %summary
 
-%install -a 
-rm -rf %{buildroot}/%{_libdir}/cmake
+%install -a
 
 %files -f %{name}.lang
 %{_datadir}/kdevappwizard/templates/kirigami6.tar.bz2
@@ -81,9 +80,7 @@ rm -rf %{buildroot}/%{_libdir}/cmake
 %files -n %{devname}
 %{_includedir}/KF6/Kirigami
 %{_qtdir}/metatypes/qt6kirigamiplatform_metatypes.json
-
-# pending rename
-# %{_libdir}/cmake/KF6Kirigami*
+%{_libdir}/cmake/KF6Kirigami*
 
 %files -n %{libname}
 %{_libdir}/libKirigami.so*
